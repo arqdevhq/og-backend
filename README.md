@@ -26,6 +26,7 @@ When developing locally, we use:
 - [`poetry`](https://github.com/python-poetry/poetry) (**required**)
 - `pycharm 2017+` or `vscode`
 
+Development Guide here: [`docs/pages/template/development.rst`](docs).
 
 ## Documentation
 
