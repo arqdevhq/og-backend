@@ -39,6 +39,9 @@ INSTALLED_APPS: Tuple[str, ...] = (
     # Security:
     'axes',
 
+     # Rest API
+    'rest_framework',
+
     # Health checks:
     # You may want to enable other checks as well,
     # see: https://github.com/KristianOellegaard/django-health-check

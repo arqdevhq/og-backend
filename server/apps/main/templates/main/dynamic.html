@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- Primary Meta Tags -->
+      <meta name="title" content="{{ title }}"/>
+      <meta name="description" content="{{ description }}"/>
+      <!-- Open Graph / Facebook -->
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="{{ title }}"/>
+      <meta property="og:site_name" content="{{ site_name }}">
+      <meta property="og:description" content=" {{ description }} "/>
+      <meta property="og:image" content="{{image_url}}"/>
+      <!-- Twitter -->
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="{{ site_url}}"/>
+      <meta property="twitter:title" content="{{ title }}"/>
+      <meta property="twitter:description" content="{{ description }}"/>
+      <meta property="twitter:image" content={{image_url}}/>
+
+      <!-- [time] is the time to redirect. For immediate loading, you can set it to 0 -->
+      <meta http-equiv="refresh" content="0; url={{ site_url }}" />
+
+      <script type="text/javascript">
+        window.location.href = "{{ site_url }}";
+    </script>
+   </head>
+   <body></body>
+</html>

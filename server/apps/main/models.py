@@ -31,3 +31,29 @@ class BlogPost(models.Model):
     def __str__(self) -> str:
         """All django models should have this method."""
         return textwrap.wrap(self.title, _POST_TITLE_MAX_LENGTH // 4)[0]
+
+
+_TITLE_MAX_LENGTH: Final = 200
+@final
+class DynamicHtml(models.Model):
+    """
+    This model is used for Generating Dynamic Html
+    """
+    title = models.CharField(max_length=200)
+    html_text = models.TextField()
+    description = models.TextField()
+    site_name = models.CharField(max_length=80)
+    site_url = models.TextField()
+    image_url = models.TextField()
+
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta(object):
+        verbose_name = 'DynamicHtml'  # You can probably use `gettext` for this
+        verbose_name_plural = 'DynamicHtml'
+
+    def __str__(self) -> str:
+        """All django models should have this method."""
+        return textwrap.wrap(self.title, 200 // 4)[0]
